@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pre-paid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="nav-items"><a href="#airtel1">airtel</a></li>
+            <li class="nav-items"><a href="#jio1">jio</a></li>
+            <li class="nav-items"><a href="#vi1">VI</a></li>
+            <li class="nav-items"><a href="#bsnl1">bsnl</a></li>
+            <li><input type="text" class="search-box" ></li>
+            <div class="filter-options">
+    <form action="filter.php" method="POST">
+        <label for="sim">SIM:</label>
+        <select name="sim" id="sim">
+            <option value="All">All</option>
+            <option value="Airtel">Airtel</option>
+            <option value="Jio">Jio</option>
+            <option value="BSNL">BSNL</option>
+            <option value="Vi">Vi</option>
+        </select>
+        <label for="price">Price Range:</label>
+        <select name="price" id="price">
+            <option value="">Any</option>
+            <option value="0-100">0-100</option>
+            <option value="200-500">200-500</option>
+            <option value="500-1000">500-1000</option>
+            <option value="1000-above">1000 above</option>
+        </select>
+        <label for="validity">Validity:</label>
+        <select name="validity" id="validity">
+            <option value="">Any</option>
+            <option value="1-10">1-10</option>
+            <option value="30">30</option>
+            <option value="84">84</option>
+            <option value="365">365</option>
+        </select>
+        <label for="dataperday">Data Per Day:</label>
+        <select name="dataperday" id="dataperday">
+            <option value="">Any</option>
+            <option value="1">1 GB per day</option>
+            <option value="1.5">1.5 GB per day</option>
+            <option value="2">2 GB per day</option>
+        </select>
+        <label for="additionaldata">Additional Data:</label>
+        <input type="text" name="additionaldata" id="additionaldata" placeholder="Enter additional data">
+        <label for="type">Type:</label>
+        <input type="text" name="type" id="type" placeholder="Enter type">
+        <input type="submit" value="Filter">
+    </form>
+</div>
+        </ul>
+        <div class="right-container">
+            <input type="text" class="search-box" placeholder="search">
+            <a href="#" class="register-link">Register </a>
+
+
+        </div>
+    </nav>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <!--<div class="slider">
+                <div class="slide-content">
+                    <h1 class="sim-title">Airtel</h1>
+                    <p class="sim-des">
+                        The Airtel Logo The Airtel logo is a strong, contemporary and confident symbol for a brand that is always ahead of the rest.
+                    </p>
+                    
+                </div>
+                <img src="images/Airtel-Logo.png" alt="">
+            </div>--->
+
+        </div>
+    </div>
+    <!------------------------------------airtel-------------------------------->
+    <nav class="sim" id="airtel1">
+        <ul class="navsim">
+            <li><a href="#airtel1">airtel</a></li>
+            <li><a href="#data">Data</a></li>
+            <li><a href="#truly unlimited">truly unlimited</a></li>
+            <li><a href="#recommended plans">recommended plans</a></li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <button class="pre-btn" title="btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn" title="btn"><img src="images/nxt.png" alt=""></button>
+        <div class="sim-list">
+            <div class="card" id="data">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2>Data</h2>
+                    <p>data: 2GB</p>
+                    <p>validity: 1 day</p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:2gb</p>
+                    <p> validity:1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:2gb</p>
+                    <p> validity:1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="truly unlimited">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:3 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:3 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:3 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="recommended plans">
+                <div>
+                    <img src="images/Airtel-Logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;">
+                    <h2> Data</h2>
+                    <p>data:3 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-card" id="popup-card">
+        <div class="header1">
+            <img src="images/Airtel-Logo.png" alt="you image" style="max-width: 150px; display: block; margin: 0 auto;">
+        </div>
+        <!-- Content for the popup card goes here -->
+        <p>
+            Description: This is a sample description for the data plan.
+        </p>
+        <div class="line"></div>
+        <button class="close-button" id="close-button" onclick="toggleDescription(this)">Close</button>
+    </div>
+    <!-------------------------------jio----------------------------->
+    <nav class="sim" id="jio1">
+        <ul class="navsim">
+            <li><a href="#jio1">jio</a></li>
+            <li><a href="#data1">Data</a></li>
+            <li><a href="#truly unlimited1">truly unlimited</a></li>
+            <li><a href="#recommended plans1">recommended plans</a></li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <button class="pre-btn" title="btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn" title="btn"><img src="images/nxt.png" alt=""></button>
+        <div class="sim-list" id="jio1">
+            <div class="card" id="data1">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2>Data</h2>
+                    <p>data: 2GB</p>
+                    <p>validity: 1 day</p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:2gb</p>
+                    <p> validity:1day
+                    </p>
+                    <div class="containers ">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div><div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div><div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div><div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div><div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                </div>
+            </div><div class="card">
+                <div>
+                    <img src="images/Jio_logo.png" alt="Your Image"
+                        style="max-width: 100px; display: block; margin: 0 auto;width:30%">
+                    <h2> Data</h2>
+                    <p>data:1 gb</p>
+                    <p> validity: 1day
+                    </p>
+                    <div class="containers">
+                        <button onclick="toggleDescription(this)">view more</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="popup-card" id="popup-card">
+                <div class="header1">
+                    <img src="images/Jio_logo.png" alt="you image" style="max-width: 150px; display: block; margin: 0 auto;">
+                </div>
+                <!-- Content for the popup card goes here -->
+                <p>
+                    Description: This is a sample description for the data plan.
+                </p>
+                <div class="line"></div>
+                <button class="close-button" id="close-button" onclick="toggleDescription(this)">Close</button>
+            </div>
+            <!--------------------------------------vi--------------------------------------------->
+            <nav class="sim" id="vi1">
+                <ul class="navsim">
+                    <li><a href="#vi1">VI</a></li>
+                    <li><a href="#data2">Data</a></li>
+                    <li><a href="#truly unlimited2">truly unlimited</a></li>
+                    <li><a href="#recommended plans2">recommended plans</a></li>
+
+                </ul>
+            </nav>
+            <div class="container">
+                <button class="pre-btn" title="btn"><img src="images/pre.png" alt=""></button>
+                <button class="nxt-btn" title="btn"><img src="images/nxt.png" alt=""></button>
+                <div class="sim-list" id="vi1">
+                    <div class="card" id="data2">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2>Data</h2>
+                            <p>data: 2GB</p>
+                            <p>validity: 1 day</p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:1 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:2gb</p>
+                            <p> validity:1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:2gb</p>
+                            <p> validity:1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="truly unlimited2">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="recommended plans2">
+                        <div>
+                            <img src="images/vodafone-logo.webp" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-card" id="popup-card">
+                <div class="header1">
+                    <img src="images/vodafone-logo.webp" alt="you image" style="max-width: 150px; display: block; margin: 0 auto;">
+                </div>
+                <!-- Content for the popup card goes here -->
+                <p>
+                    Description: This is a sample description for the data plan.
+                </p>
+                <div class="line"></div>
+                <button class="close-button" id="close-button" onclick="toggleDescription(this)">Close</button>
+            </div>
+            <!------------------------------------bsnl----------------------------------------->
+            <nav class="sim" id="bsnl1">
+                <ul class="navsim">
+                    <li><a href="#bsnl1">bsnl</a></li>
+                    <li><a href="#data3">Data</a></li>
+                    <li><a href="#truly unlimited3">truly unlimited</a></li>
+                    <li><a href="#recommended plans3">recommended plans</a></li>
+
+                </ul>
+            </nav>
+            <div class="container">
+                <button class="pre-btn" title="btn"><img src="images/pre.png" alt=""></button>
+                <button class="nxt-btn" title="btn"><img src="images/nxt.png" alt=""></button>
+                <div class="sim-list" id="bsnl1">
+                    <div class="card" id="data3">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2>Data</h2>
+                            <p>data: 2GB</p>
+                            <p>validity: 1 day</p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:1 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:2gb</p>
+                            <p> validity:1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:2gb</p>
+                            <p> validity:1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="truly unlimited3">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="recommended plans3">
+                        <div>
+                            <img src="images/bsnl.png" alt="Your Image"
+                                style="max-width: 100px; display: block; margin: 0 auto;width:70%">
+                            <h2> Data</h2>
+                            <p>data:3 gb</p>
+                            <p> validity: 1day
+                            </p>
+                            <div class="containers">
+                                <button onclick="toggleDescription(this)">view more</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-card" id="popup-card">
+                <div class="header1">
+                    <img src="images/bsnl.png" alt="you image" style="max-width: 150px; display: block; margin: 0 auto;">
+                </div>
+                <!-- Content for the popup card goes here -->
+                <p>
+                    Description: This is a sample description for the data plan.
+                </p>
+                <div class="line"></div>
+                <button class="close-button" id="close-button" onclick="toggleDescription(this)">Close</button>
+            </div>
+            <script src="index.js" async></script>
+            <footer>
+                <div class="footer-content">
+                    <div class="SocialIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="footerNav">
+                        <ul>
+                            <li><a href=""> Home</a></li>
+                            <li><a href=""> News</a></li>
+                            <li><a href=""> About</a></li>
+                            <li><a href=""> Contact Us</a></li>
+                            <li><a href=""> Our Team</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="footerBottom">
+                    <p>copyright &copy;2023; Designed by<span class="designer"> telcom</span></p>
+                </div>
+            </footer>
+
+</body>
+
+</html>
