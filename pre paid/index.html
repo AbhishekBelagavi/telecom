@@ -103,7 +103,7 @@
                     <p> validity:1day
                     </p>
                     <div class="containers">
-                        <button>view more</button>
+                        <button onclick="toggleDescription(this)">view more</button>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                     <p> validity: 1day
                     </p>
                     <div class="containers">
-                        <button>view more</button>
+                        <button onclick="toggleDescription(this)">view more</button>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                     <p> validity: 1day
                     </p>
                     <div class="containers">
-                        <button>view more</button>
+                        <button onclick="toggleDescription(this)">view more</button>
                     </div>
                 </div>
             </div>
@@ -156,12 +156,24 @@
                     <p> validity: 1day
                     </p>
                     <div class="containers">
-                        <button>view more</button>
+                        <button onclick="toggleDescription(this)">view more</button>
                     </div>       
                     
                      </div>
                 </div>
             </div>
+        </div>
+        <div class="popup-card" id="popup-card">
+            <div class="header1">
+                <img src="images/Airtel-Logo.png" alt="you image"
+                style="max-width: 150px; display: block; margin: 0 auto;">
+            </div>
+            <!-- Content for the popup card goes here -->
+            <p>
+                Description: This is a sample description for the data plan.
+            </p>
+            <div class="line"></div>
+            <button class="close-button" id="close-button">Close</button>
         </div>
      <!-------------------------------jio----------------------------->  
      <nav class="sim" id="jio1"  >
@@ -210,8 +222,8 @@
                     <p>data:2gb</p>
                     <p> validity:1day
                     </p>
-                    <div class="containers">
-                        <button>view more</button>
+                    <div class="containers ">
+                        <button >view more</button>
                     </div>
                 </div>
             </div>
@@ -265,6 +277,7 @@
                     <div class="containers">
                         <button>view more</button>
                     </div>
+
                 </div>
             </div>
             <div class="card" id="recommended plans1">
@@ -276,13 +289,25 @@
                     <p> validity: 1day
                     </p>
                     <div class="containers">
-                        <button>view more</button>
-                    </div>       
+                        <button onclick="toggleDescription(this)">view more</button>
+
+                    </div>    
+                    <div class="overlay" id="overlay"></div>
+                    <div class="popup-card" id="popup-card">
+                        <!-- Content for the popup card goes here -->
+                        <button class="close-button" id="close-button">Close</button>
+                    </div>
                     
                      </div>
+                     
                 </div>
             </div>
+            <div class="overlay" id="overlay"></div>
+<div class="popup-card" id="popup-card">
+    <!-- Content for the popup card goes here -->
+    <button class="close-button" id="close-button">Close</button>
         </div> 
+       
         
     <!--------------------------------------vi--------------------------------------------->
     <nav class="sim" id="vi1">

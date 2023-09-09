@@ -92,7 +92,31 @@ document.querySelectorAll('.container').forEach((container) => {
       });
     });
   });
-  
+
+// click button   
+function toggleDescription(button) {
+    var popupCard = document.getElementById('popup-card');
+    var overlay = document.getElementById('overlay');
+    var closeButton = document.getElementById('close-button');
+
+    // Check if the popup card is already displayed
+    if (popupCard.style.display === 'block') {
+        popupCard.style.display = 'none';
+        overlay.style.display = 'none';
+        return;
+    }
+
+    // Display the popup card and overlay
+    popupCard.style.display = 'block';
+    overlay.style.display = 'block';
+
+    // Add an event listener to close the popup card when the close button is clicked
+    closeButton.addEventListener('click', function () {
+        popupCard.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+}
+
  
 
 
