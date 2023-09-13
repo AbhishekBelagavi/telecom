@@ -25,7 +25,7 @@ nav {
 .navbar{
     width: 100%;
     height: 80px;
-    position:fixed ; 
+    position: relative;
     top: 0;
     left:0;
     padding: 0 4%;
@@ -33,9 +33,9 @@ nav {
     z-index: 9;
     display: flex;
     align-items: center;
-
+    margin-bottom: 0; 
+    
 }
-
 .nav-links{
     margin-top: 10px;
     display: flex;
@@ -114,10 +114,8 @@ nav ul li a:hover::after {
     padding: 20px 0;
     overflow-x: hidden;
     margin-top: 0; 
-    padding-bottom: 5%;
     
 }
-
 
 
 .carousel{
@@ -140,7 +138,7 @@ nav ul li a:hover::after {
     overflow: hidden;
 }
 .slider img{
-    width:30%;
+    width:70%;
     min-height: 100%;
     object-fit: cover;
     display: block;
@@ -167,10 +165,10 @@ nav ul li a:hover::after {
     opacity: 0.8;
 }
 /* -----airtel------ */
-.cards{
+.sim{
     color: #fff;
     opacity: 0.9;
-    padding-left: 0 4%;
+    padding-left: 4%;
     text-transform: capitalize;
     font-size: 22px;
     font-weight: 500;
@@ -236,7 +234,6 @@ nav ul li a:hover::after {
     margin: 0 auto;
     
 }
-
 .sim-list div a:hover{
     color: #060304;
 
@@ -290,148 +287,17 @@ nav ul li a:hover::after {
 .containers{
     text-align: center;
 }
-/* Style the footer container */
-footer{
-  background-attachment:#111;
-  background-color:#111;
- 
- 
-}
-.footer-content{
-  width: 100%;
-  padding:70px 30px 20px;
-
-}
-.SocialIcons{
-  display: flex;
-  justify-content: center;
-  
-}
-.SocialIcons a{
-  text-decoration: none;
-  padding: 10px;
-  background-color:white;
-  margin: 10px;
-  border-radius:50%;
-}
-.SocialIcons a i{
-  font-size: 2em;
-  color:black;
-  opacity: 0.9;
-}
-.SocialIcons a:hover{
-  background-color:#111;
-  transition: 0.5s;
-
-}
-.SocialIcons a:hover i{
-  color: white  ;
-  transition: 0.5s;
-  
-}
-.footerNav{
-  margin: 30px 0;
+.box {
+    width: 20%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
   
   
-}
-.footerNav ul{
-  display: flex;
-  justify-content: center;
-}
-
-.footerNav ul li a{
-  color:white;
-  margin: 20px;
-  text-decoration: none;
-  font-size: 1.3em;
-  opacity: 0.7;
-  transition: 0.5s;
-}
-.footerNav ul li a:hover{
-  opacity: 1;
-}
-.footerBottom{
-  background-color:#000;
-  padding: 20px;
-  text-align: center;
-
-}
- 
-.footerBottom p{
-  color:white;
-
-}
-.designer{
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0px 5px;
-}
- 
-/* click button */
-.popup-card {
   
-  width: 400px;
-  height: 350px;
-  background:white;
-  border-radius:3px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
-  display: none;
-  background-color: #fff; /* Set your desired background color for the popup card */
-  padding: 30px;
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-   position: fixed; /* Change to 'fixed' to make it fixed on the screen */
-  transform: translate(-50%, -50%);
-  max-width: 100%; /* Set the maximum width for the popup card */
-  max-height: 100%; /* Set the maximum height for the popup card */
-  overflow: hidden; /* Hide any content that overflows */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Set your desired box shadow */
-  z-index: 2;
-  
-}
-.header1{
-  height: 68px;
-  overflow: hidden;
-  background-color:#fff;
-  border-radius: 3px 3px 0 0;
-  /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4); */
-}
-.header1 img{
-  padding-left: 32px;
-  
-}
-
-.popup-card-content {
-  overflow-y: auto; /* Enable vertical scrollbar if content exceeds max-height */
-  max-height: 100%; /* Set the maximum height for the scrollable content */
-}
-
-.close-button {
-  position: absolute;
-  bottom: 1px;
-  right: 2px;
-  border: 1px solid #111;
-  border-radius: 3px;
-  color: #111;
-  padding: 8px 10px;
-  font-size: 18px;
-  cursor: pointer;
-   
-}
-.popup-card p{
-  padding-top: 10px;
-  font-size: 19px;
-  color: #1a1a1a;
-  text-align: center;
-}
-
-.popup-card.close-button button:hover{
-  color:#111;
-  background:f5f5f5;
-}
-
 

@@ -4,22 +4,22 @@ let cards = [
     {
         name: "Airtel",
         des: "*Become an #airtelThanks Silver, Gold, or Platinum member *Enjoy exclusive rewards, offers, and privileges",
-        image: "D:/PPbpa/telecom/postpaid/images/airtel1.png"
+        image: "D:/PPbpa/telecom/HOME/postpaid1/images/airtel1.png"
     },
     {
         name: "Airtel",
         des: "Super Special Packs starting at just Rs.249 *Get life insurance cover worth Rs. 4 lakh *Enjoy Amazon prime at no extra cost",
-        image: "D:/PPbpa/telecom/postpaid/images/airtel2.png"
+        image: "D:/PPbpa/telecom/HOME/postpaid1/images/airtel2.png"
     },
     {
         name: "Jio",
         des: "There’s more to Jio than just unlimited data and free voice calls,Get rewarded for recharges, earn discount vouchers every day, stream movies and music for free, and much more.",
-        image: "D:/PPbpa/telecom/postpaid/images/hero-banner-image.png"
+        image: "D:/PPbpa/telecom/HOME/postpaid1/images/hero-banner-image.png"
     },
     {
         name: "Jio",
         des: "Easily manage your mobile and JioFiber services:Now manage your mobile and JioFiber services with ease. Do more with the new JioFiber mini-app! Recharge, get real-time usage details, manage multiple accounts, set up JioAutoPay, and do much more.",
-        image: "D:/PPbpa/telecom/postpaid/images/newjio.png"
+        image: "D:/PPbpa/telecom/HOME/postpaid1/images/newjio.png"
     }
 ];
 var tableData = [
