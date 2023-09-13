@@ -117,31 +117,159 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filtered Plans</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
+    .sim {
+        color: #fff;
+        opacity: 0.9;
+        padding-left: 4%;
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 500;
+    }
 
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
+    .container {
+        width: 100%;
+        min-height: 220px;
+        position: relative;
+        margin: 10px 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        th {
-            background-color: #f2f2f2;
-        }
+    .sim-list {
+        position: relative;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: visible;
+        gap: 20px;
+        scroll-behavior: smooth;
+        padding: 0 10px;
+    }
 
-        .table-name {
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-    </style>
+    .sim-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        position: relative;
+        min-width: 120px;
+        width: 120px;
+        height: 220px;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: 0.5s;
+        background: #7b6d8d;
+        float: left;
+        margin-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        max-width: 100px;
+        display: block;
+        margin: 20px auto 10px;
+    }
+
+    .sim-list div h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #0b0707;
+    }
+
+    .sim-list div h2 {
+        text-align: center;
+        color: #0b0707;
+        font-size: 14px;
+    }
+
+    .sim-list div p {
+        color: #080404;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .sim-list div a {
+        text-decoration: none;
+        color: #0d0909;
+        font-size: 10px;
+        margin-top: 10px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .sim-list div a:hover {
+        color: #060304;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* .card:not(:hover) {
+        filter: blur(0.5px); /* Apply blur effect to non-hovered cards */
+    */
+
+    .pre-btn,
+    .nxt-btn {
+        position: absolute;
+        top: 0;
+        width: 5%;
+        height: 100%;
+        z-index: 2;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .pre-btn {
+        left: 0;
+        background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+    }
+
+    .nxt-btn {
+        right: 0;
+        background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+    }
+
+    .pre-btn img,
+    .nxt-btn img {
+        width: 15px;
+        height: 20px;
+        opacity: 0;
+    }
+
+    .pre-btn:hover img,
+    .nxt-btn:hover img {
+        opacity: 1;
+    }
+
+    button {
+        border: none;
+        font-size: 12px;
+        color: #030b17;
+        padding: 6px 12px;
+        background-color: #fff;
+        border-radius: 24px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .containers {
+        text-align: center;
+    }
+</style>
+
+
 </head>
 <body>
     <div class="main-content">
@@ -183,50 +311,85 @@ $result = $conn->query($sql);
             <input type="text" name="type" id="type" placeholder="Enter type">
             <input type="submit" value="Filter">
         </form>
+        <div class="main-content">
+    <?php
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            // Get the table name from the row
+            $tableName = $row["table_name"];
 
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                // Get the table name from the row
-                $tableName = $row["table_name"];
+            // Display the table name as a heading
+          
 
-                // Display the table name as a heading
-                if (!empty($tableName)) {
-                    echo "<div class='table-name'>$tableName Prepaid Plans</div>";
-                }
-
-                echo "<table>";
-                echo "<tr>";
-                echo "<th>ID</th>";
-                echo "<th>Price</th>";
-                echo "<th>Validity</th>";
-                echo "<th>Data Per Day</th>";
-                echo "<th>Additional Data</th>";
-                echo "<th>Data/Talktime</th>";
-                echo "<th>Type</th>";
-                echo "<th>Description</th>";
-                echo "</tr>";
-
-                do {
-                    echo "<tr>";
-                    echo "<td>" . $row["id"] . "</td>";
-                    echo "<td>" . $row["price"] . "</td>";
-                    echo "<td>" . $row["validity"] . "</td>";
-                    echo "<td>" . $row["dataperday"] . "</td>";
-                    echo "<td>" . $row["additionaldata"] . "</td>";
-                    echo "<td>" . $row["data_talktime"] . "</td>";
-                    echo "<td>" . $row["type"] . "</td>";
-                    echo "<td>" . $row["description"] . "</td>";
-                    echo "</tr>";
-                } while (($row = $result->fetch_assoc()) && $row["table_name"] === $tableName);
-
-                echo "</table>";
+            // Determine the SIM image based on the SIM name
+            $simImage = "";
+            switch ($tableName) {
+                case "airtel_prepaid":
+                    $simImage = "images/Airtel-Logo.png";
+                    break;
+                case "jio_prepaid":
+                    $simImage = "images/Jio_logo.png";
+                    break;
+                case "bsnl_prepaid":
+                    $simImage = "images/bsnl.png";
+                    break;
+                case "vi_prepaid":
+                    $simImage = "images/vodafone-logo.webp";
+                    break;
+                // Add more cases for other SIMs if needed
             }
-        } else {
-            echo "<p>No data available</p>";
+            echo "<div class='card' onmouseover='showAllData(this)' onmouseout='hideAllData(this)'>"; // Opening <div> for card with hover events
+echo "<div class='card-content'>"; // Opening <div> for card content
+// Add the SIM logo image here with inline style
+echo "<img src='$simImage' alt='SIM Image' style='max-width: 100px; display: block; margin: 0 auto;'>";
+
+// Display initial data in the card
+// echo "<h2 style='font-size: 18px; margin-top: 10px;'>Plan Details</h2>";
+echo "<p style='font-size: 14px; margin: 5px 0;'>Price: {$row['price']}</p>";
+echo "<p style='font-size: 14px; margin: 5px 0;'>Data Per Day: {$row['dataperday']}</p>";
+echo "<p style='font-size: 14px; margin: 5px 0;'>Validity: {$row['validity']}</p>";
+
+// Display all other columns' data here (hidden by default)
+echo "<div class='additional-data' style='display: none;'>";
+foreach ($row as $columnName => $columnValue) {
+    if ($columnName !== 'price' && $columnName !== 'dataperday' && $columnName !== 'validity') {
+        echo "<p style='font-size: 14px; margin: 5px 0;'>$columnName: $columnValue</p>";
+    }
+}
+echo "</div>"; // Closing </div> for additional data
+
+echo "</div>"; // Closing </div> for card content
+echo "</div>"; // Closing </div> for card
+ // Closing </div> for card
+
+            // Generate the popup card for each result row (hidden by default)
+            echo "<div class='popup-card' style='display: none;'>"; // Opening <div> for popup card
+            echo "<div class='header1'>";
+            // Use the same SIM image for the popup card
+            echo "<img src='$simImage' alt='SIM Image' style='max-width: 150px; display: block; margin: 0 auto;'>";
+            echo "</div>";
+            // Add more content for the popup card as needed
+            echo "<p>Description: " . $row["description"] . "</p>";
+            echo "<div class='line'></div>";
+            echo "<button class='close-button' onclick='hidePopup(this)'>Close</button>";
+            echo "</div>"; // Closing </div> for popup card
         }
-        ?>
-    </div>
+    } else {
+        echo "<p>No data available</p>";
+    }
+    ?>
+    <script>
+function showAllData(card) {
+    const additionalData = card.querySelector('.additional-data');
+    additionalData.style.display = 'block';
+}
+
+function hideAllData(card) {
+    const additionalData = card.querySelector('.additional-data');
+    additionalData.style.display = 'none';
+}
+</script>
+</div>
 </body>
 </html>
 
