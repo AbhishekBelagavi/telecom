@@ -1,73 +1,65 @@
 <?php
-    include 'connection.php';
-?>
+    include './config/connection.php';
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    if(isset($_GET['search'])){
+        $search = $_GET['search'];
+        $sql = "SELECT * FROM `airtel_prepaid` 
+        WHERE id LIKE '%$search%' OR price LIKE '%$search%' OR data_talktime LIKE '%$search%' OR validity LIKE '%$search%' OR type LIKE '%$search%'
+        
+        UNION
+        
+        SELECT * FROM `jio_prepaid` 
+        WHERE id LIKE '%$search%' OR price LIKE '%$search%' OR data_talktime LIKE '%$search%' OR validity LIKE '%$search%' OR type LIKE '%$search%'
+        
+        UNION
+        
+        SELECT * FROM `bsnl_prepaid` 
+        WHERE id LIKE '%$search%' OR price LIKE '%$search%' OR data_talktime LIKE '%$search%' OR validity LIKE '%$search%' OR type LIKE '%$search%'
+        
+        UNION
+        
+        SELECT * FROM `vi_prepaid` 
+        WHERE id LIKE '%$search%' OR price LIKE '%$search%' OR data_talktime LIKE '%$search%' OR validity LIKE '%$search%' OR type LIKE '%$search%'";
 
-</head>
-<body>
-    <div class="container my-5">
-        <form method="post">
-            <input type="text" placeholder="Search data" name="search">
-            <button class="btn btn-dark btn-sm" name="submit">Search</button>
-        </form>
+        $result = mysqli_query($conn, $sql);
 
-    </div>
-    <div class="container my-5">
-        <table class="table">
-        <?php
-            if(isset($_POST['submit'])){
-                $search =$_POST['search'];
-                $sql="Select * from `airtel_prepaid` where id like '%$search%' or price like '%$search%' or validity like '%$search%' or type like '%$search%' ";
-                $result= mysqli_query($connection, $sql);
+        if($result){
+            if(mysqli_num_rows($result) > 0){
+                echo '<div class="container my-5">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sl_no</th>
+                                    <th>Price</th>
+                                    <th>Validity</th>
+                                    <th>Data per Day</th>
+                                    <th>Additional Data</th>
+                                    <th>Data/Talktime</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>';
 
-                if($result){
-                    if(mysqli_num_rows($result)>0){
-                        echo  '<thead>
-                    <tr>
-                    <th>Sl_no</th>
-                    <th>Price</th>
-                    <th>Validity</th>
-                    <th>Data</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                    </tr>
-                    </thead>
-                    ';
-                    while ($row=mysqli_fetch_assoc($result)){                                    
-                    echo '<tbody>
-                    <tr>
-                    <td>'.$row['id'].'</td>
-                    <td>'.$row['price'].'</td>
-                    <td>'.$row['validity'].'</td>
-                    <td>'.$row['data/talktime'].'</td>
-                    <td>'.$row['type'].'</td>
-                    <td>'.$row['description'].'</td>
-                    
-                    </tr>
-                    </tbody>';
-
-                    }
+                while ($row = mysqli_fetch_assoc($result)){
+                    echo '<tr>
+                            <td>'.$row['id'].'</td>
+                            <td>'.$row['price'].'</td>
+                            <td>'.$row['validity'].'</td>
+                            <td>'.$row['dataperday'].'</td>
+                            <td>'.$row['additionaldata'].'</td>
+                            <td>'.$row['data_talktime'].'</td>
+                            <td>'.$row['type'].'</td>
+                            <td>'.$row['description'].'</td>
+                          </tr>';
                 }
 
-                    else{
-                        echo '<h2 class=text-danger>Data Not Found </h2> '  ;
-                    }
-
-                }
-               
+                echo '</tbody></table></div>';
+            } else {
+                echo '<div class="container my-5">
+                        <h2 class="text-danger">Data Not Found</h2>
+                      </div>';
             }
-
-            ?>
-         
-        </table>
-    </div>
-
-</body>
-</html>
+        }
+    }
+?>
