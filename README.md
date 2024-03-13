@@ -34,12 +34,16 @@ To run TELECOMPARE on your local machine, follow these steps:
 
 1. Open your web browser and navigate to [http://localhost/telecompare](http://localhost/telecompare).
 2. You should now see the TELECOMPARE homepage.
+**Please Note:** We are currently in the beta testing phase, and our project is still in progress.
+
+3. Internet Network Coverage feature is currently under development.
 
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **Database**: MySQL
+
 
 ## License
 
