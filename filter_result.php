@@ -625,12 +625,12 @@ $result = $conn->query($sql);
                             document.getElementById('popup-id').innerText = planDetails.id;
                             document.getElementById('popup-price-value').innerText = '₹' + planDetails.price;
 
-                            document.getElementById('popup-validity').innerText = +planDetails.validity + ' days';
-                            document.getElementById('popup-dataperday').innerText = +planDetails.dataperday + ' GB';
-                            document.getElementById('popup-additionaldata').innerText = +planDetails.additionaldata + ' GB';
-                            document.getElementById('popup-data_talktime').innerText = +planDetails.data_talktime;
-                            document.getElementById('popup-type').innerText = +planDetails.type;
-                            document.getElementById('popup-description').innerText = +planDetails.description;
+                            document.getElementById('popup-validity').innerText = planDetails.validity + ' days';
+                            document.getElementById('popup-dataperday').innerText = planDetails.dataperday + ' GB';
+                            document.getElementById('popup-additionaldata').innerText = planDetails.additionaldata + ' GB';
+                            document.getElementById('popup-data_talktime').innerText = planDetails.data_talktime;
+                            document.getElementById('popup-type').innerText = planDetails.type;
+                            document.getElementById('popup-description').innerText = planDetails.description;
                         } else {
                             console.error('Failed to fetch plan details');
                         }

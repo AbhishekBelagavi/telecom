@@ -154,7 +154,17 @@ foreach ($_GET as $tableName => $planIds) {
         <table class="table table-striped">
             <!-- Static Headers Row -->
 
-
+            <tr>
+                <th class="static-headers">Service Provider / Plan ID</th>
+                <?php foreach ($selectedPlans as $tableName => $plans) : ?>
+                    <?php $serviceProvider = getServiceName($tableName); ?>
+                    <?php foreach ($plans as $plan) : ?>
+                        <td class="dynamic-data">
+                            <?php echo $serviceProvider . " / " . $plan['id']; ?>
+                        </td>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+            </tr>
             <tr>
                 <th class="static-headers">Price</th>
                 <?php foreach ($selectedPlans as $plans) : ?>
@@ -196,7 +206,7 @@ foreach ($_GET as $tableName => $planIds) {
                 <?php foreach ($selectedPlans as $plans) : ?>
                     <?php foreach ($plans as $plan) : ?>
                         <td class="dynamic-data">
-                            <?php echo $plan['data/talktime']; ?>
+                            <?php echo $plan['data_talktime']; ?>
                         </td>
                     <?php endforeach; ?>
                 <?php endforeach; ?>
@@ -238,6 +248,23 @@ foreach ($_GET as $tableName => $planIds) {
 
 </html>
 <?php
-// Close the database connection
+function getServiceName($tableName)
+{
+    // Define an array to map table names to service provider names
+    $serviceProviders = [
+        'airtel_postpaid' => 'Airtel',
+        'airtel_prepaid' => 'Airtel',
+        'bsnl_postpaid' => 'BSNL',
+        'bsnl_prepaid' => 'BSNL',
+        'jio_postpaid' => 'Jio',
+        'jio_prepaid' => 'Jio',
+        'vi_postpaid' => 'VI',
+        'vi_prepaid' => 'VI'
+        // Add more mappings as needed
+    ];
+
+    // Return the service provider name based on the table name
+    return isset($serviceProviders[$tableName]) ? $serviceProviders[$tableName] : '';
+}
 $conn->close();
 ?>
