@@ -1,0 +1,293 @@
+body {
+    /* Adjust the value as needed */
+     margin: 0 auto; /* Center the content */
+     overflow-x: hidden; /* Hide horizontal overflow */
+     width: 80%;
+ }
+ 
+ 
+ .menu-logo-container {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .menu-icon {
+     cursor: pointer;
+ }
+ 
+ .menu-icon-img {
+     width: 40px;
+     height: 40px;
+ }
+ 
+ .bar {
+     width: 20px;
+     height: 2px;
+     background-color: #fff;
+     margin: 4px 0;
+     transition: 0.4s;
+ }
+ 
+ .bar:nth-child(2) {
+     margin: 4px 0 4px 0;
+ }
+ 
+ .logo {
+     text-decoration: none;
+     margin-left: 10px; /* Adjust the margin for the gap */
+ }
+ 
+ .logo-img {
+     width: 50px;
+     height: 50px;
+     border-radius: 10px;
+     object-fit: cover;
+ }
+ 
+ .nav-btns {
+     display: flex;
+ }
+ 
+ .nav-btns a {
+     margin: 0 10px; /* Adjust margin as needed */
+     padding: 15px;
+     color: #fff;
+     text-decoration: none;
+     transition: background-color 0.3s;
+     border-radius: 8px;
+ }
+ 
+ .nav-btns a:hover {
+     background-color: #0056b3;
+ }
+ 
+ .btn {
+     margin-left: 0;
+     width: 100%;
+     color: #fff;
+     text-decoration: none;
+     padding: 15px;
+ }
+ 
+ .btn:hover {
+     background-color: rgba(0, 123, 255, 0.7);
+ }
+ 
+ .menu-logo-container {
+     display: flex;
+     align-items: center;
+     position: relative; /* Add relative positioning */
+ }
+ 
+ .dropdown-container {
+     position: absolute;
+     top: 80px;
+     left: 0; /* Change from right to left */
+     background-color: #007BFF;
+     display: none;
+     flex-direction: column;
+     border-radius: 8px; /* Adjust the border-radius for rounded edges */
+     overflow: hidden; /* Hide overflow to en
+     re rounded corners */
+ }
+ 
+ .dropdown-container.active {
+     display: flex;
+ }
+ 
+ .dropdown-option {
+     color: #fff;
+     padding: 15px;
+     text-decoration: none;
+     transition: background-color 0.3s;
+ }
+ 
+ .dropdown-option:hover {
+     background-color: #0056b3;
+ }
+ 
+ body.dark-theme {
+     background-color: #0c3058;
+     color: #fff;
+ }
+ 
+ .theme-button-container {
+     margin-left: 10px; /* Adjust margin as needed */
+ }
+ 
+ .theme-button-container button {
+     padding: 15px;
+     cursor: pointer;
+     border: none; /* Remove border */
+     background-color: #007BFF; /* Match the navbar color */
+     color: #fff;
+     transition: background-color 0.3s;
+     border-radius: 8px;
+ }
+ 
+ .theme-button-container button:hover {
+     background-color: #0056b3;
+ }
+ 
+ .theme-icon {
+     width: 20px; /* Adjust the width as needed */
+     height: 20px; /* Adjust the height as needed */
+     background-color: #007BFF; /* Match the background color with the navbar */
+     border-radius: 50%; /* Make the icons circular */
+     margin-right: 5px; /* Add some space between the icon and the button text */
+ }
+
+ .container {
+     display: flex;
+     width: 100%;
+     /* Allow the row to take up the entire width */
+     align-items: center;
+     flex-wrap: wrap;
+     padding: 5px 0;
+    
+ 
+ }
+ 
+ 
+ 
+
+ .card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    margin: 40px;
+    overflow: hidden;
+    transition: .5s;
+}
+  .card:hover {
+     transform: scale(1.1);
+     opacity: 1;
+ }
+ 
+ .card .circle {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     background-color: #000;
+     clip-path: circle(120px at center 0);
+     text-align: center;
+ }
+ .card .content {
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    padding: 20px;
+    height: 110px;
+    width:180px;
+    color: #000; 
+    margin-left:15px;
+}
+ .card .content a {
+     position: relative;
+     display: inline-block;
+     background-color: #000;
+     color: #fff;
+     padding: 5px 10px;
+     border-radius: 5px;
+     margin-top: 5px;
+     text-decoration: none;
+     margin-bottom: 5px;
+   
+ }
+
+ 
+ .grid-container {
+     display: grid;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: left;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: 8.5px;
+     color: #000; /* Set a default text color */
+     
+ }
+ 
+ .data {
+     font-weight: lighter;
+ }
+ 
+ .circle img {
+     height: 25%;
+     width: 25%;
+     border-radius: 50%;
+     position: relative;
+     top: 20px;
+     left: 10px;
+     clip-path: circle(120px at center 0);
+ }
+ 
+ .circle h2 {
+     color: #fff;
+     margin: 0px;
+     display: inline;
+     font-size: 40px;
+     margin-right: 15px;
+ }
+ 
+ .circle .type {
+ 
+     margin: 0px;
+     font-size: small;
+     color: yellow;
+     font-weight: bold;
+     margin-top: 10px;
+     background-color: #303dbc;
+     /* display: inline; */
+     border-radius: 30%;
+     width: 50%;
+ 
+     margin-left: 50px;
+ }
+ 
+ 
+ .owl-carousel {
+    display: flex;
+    width: 100%;
+    margin-right:20px;
+}
+
+.owl-item {
+    width: 200px; /* Adjust the width as needed */
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+
+.owl-carousel .card {
+    width: 200px; /* Adjust the width as needed */
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    margin: 0; /* Remove margin for individual cards */
+    overflow: hidden;
+    transition: .5s;
+}
+
+.owl-carousel .card:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+
+.owl-carousel .card .content {
+    padding: 20px;
+    height: 90px;
+    width: 100%; /* Adjust the width as needed */
+    color: #000;
+    margin-left:10px;
+}
+
+.owl-carousel .card .grid-container {
+    gap: 8.5px;
+}
+
