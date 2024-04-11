@@ -29,6 +29,11 @@
             align-items: center;
             border-bottom: 2px solid red;
         }
+        .nav-items.active {
+            color: red; /* Change color as per your preference */
+            /* Add other styles to highlight the active button */
+            /* Example: background-color, border, etc. */
+        }
     </style>
 </head>
 
@@ -49,8 +54,8 @@
                 </form>
             </div>
             <ul class="nav-links2">
-                <li class="nav-items"><a href="airtel.php">Prepaid</a></li>
-                <li class="nav-items"><a href="filter_result.php">Postpaid</a></li>
+                <li class="nav-items"><a href="filter_result.php">Prepaid</a></li>
+                <li class="nav-items"><a href="pfilter_result.php">Postpaid</a></li>
             </ul>
 
         </nav>

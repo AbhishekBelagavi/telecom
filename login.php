@@ -1,49 +1,42 @@
 <?php
 include './config/config.php';
-// Function to validate login
-function validateLogin($conn, $username, $password)
-{
-	$stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-	$stmt->bind_param("s", $username);
-	$stmt->execute();
 
-	$result = $stmt->get_result();
-	$user = $result->fetch_assoc();
+function validateLogin($conn, $username, $password) {
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
 
-	if ($user && password_verify($password, $user['password'])) {
-		return $user;
-	} else {
-		return false;
-	}
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+
+    if ($user && password_verify($password, $user['password'])) {
+        return $user;
+    } else {
+        return false;
+    }
 }
 
-session_start(); // Start a new session or resume the existing session
+session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (isset($_POST["login"])) {
-		// Login validation
-		$username = $_POST["username"];
-		$password = $_POST["password"];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-		$user = validateLogin($conn, $username, $password);
+    $user = validateLogin($conn, $username, $password);
 
-		if ($user) {
-			// Set session variables
-			$_SESSION["user_id"] = $user["id"];
-			$_SESSION["username"] = $user["username"];
-
-			// Redirect to a dashboard or home page
-			header("Location: landing.php");
-			exit();
-		} else {
-			// Invalid credentials
-			echo "Invalid username or password";
-		}
-	}
+    if ($user) {
+        $_SESSION["user_id"] = $user["id"];
+        $_SESSION["username"] = $user["username"];
+        header("Location: landing.php");
+        exit();
+    } else {
+        echo "Invalid username or password";
+    }
 }
 
 $conn->close();
 ?>
+
 
 <!doctype html>
 <html lang="en">

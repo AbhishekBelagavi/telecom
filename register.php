@@ -12,9 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
     $stmt->bind_param("sssss", $email, $password, $fullname, $phone, $telecomProvider);
 
     if ($stmt->execute()) {
-        // echo "Registration successful";
         header("Location: login.php");
-
+        exit();
     } else {
         echo "Registration failed: " . $stmt->error;
     }
@@ -23,6 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
     $conn->close();
 }
 ?>
+
+
 
 <!doctype html>
 <html lang="en">

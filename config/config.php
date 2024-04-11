@@ -2,7 +2,7 @@
 $servername = "localhost:3306";
 $username = "root";
 $password = "";
-$dbname = "telecome(2)"; // Updated database name
+$dbname = "telecome_2"; // Updated database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

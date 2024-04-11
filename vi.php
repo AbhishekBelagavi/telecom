@@ -71,13 +71,27 @@ $result = $conn->query($sql);
 
 .popup {
     background: #fff;
+    margin-top: 7%;
+    height: 80%;
     padding: 50px 30px;
-    width: 300px;
+    width: 390px;
     max-width: 100%;
     border-radius: 5px;
     box-shadow: transparent;
     text-align: center;
     position: relative;
+    overflow-y: scroll; /* Add this line */
+}
+
+.pop {
+    border: 2px solid;
+    border-collapse: collapse;
+    width: 100%; /* Ensure the table fills the available width */
+}
+
+.pop th,
+.pop td {
+    border: 2px solid black;
 }
 
 .close-btn {
@@ -108,17 +122,7 @@ th {
     background-color: #f2f2f2;
 }
 
-.pop {
-    border: 2px solid;
-    border-collapse: collapse;
 
-}
-
-.pop th,
-td {
-    border: 2px solid black;
-
-}
 
 .compare-container {
     position: fixed;
@@ -316,8 +320,7 @@ td {
                     break;
             }
             ?>
-            <img src="<?php echo $popupSimImage; ?>" width="200" height="150"
-                alt="<?php echo $tableName; ?> Logo">
+            <img src="<?php echo $popupSimImage; ?>" width="70" height="50" alt="<?php echo $tableName; ?> Logo">
 
             <h1 id="popup-price-heading" style="text-align: left;"></h1>
 

@@ -49,7 +49,7 @@
                 </form>
             </div>
             <ul class="nav-links2">
-                <li class="nav-items"><a href="airtel.php">Prepaid</a></li>
+                <li class="nav-items"><a href="filter_result.php">Prepaid</a></li>
                 <li class="nav-items"><a href="pfilter_result.php">Postpaid</a></li>
             </ul>
 

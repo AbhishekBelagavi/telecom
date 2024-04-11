@@ -258,8 +258,8 @@ $result = $conn->query($sql);
         font-weight: bold;
         text-align: left;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 9px;
+        grid-template-rows: repeat(2, 0fr);
+        gap: 4px;
     }
 
     grid-item {
@@ -342,20 +342,30 @@ $result = $conn->query($sql);
         text-align: center;
 
     }
-
     .popup {
-        background: #fff;
-        margin-top: 7%;
-        height: 80%;
-        padding: 50px 30px;
-        width: 314px;
-        max-width: 100%;
-        border-radius: 5px;
-        box-shadow: transparent;
-        text-align: center;
-        position: relative;
-    }
+    background: #fff;
+    margin-top: 7%;
+    height: 80%;
+    padding: 50px 30px;
+    width: 390px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: transparent;
+    text-align: center;
+    position: relative;
+    overflow-y: scroll; /* Add this line */
+}
 
+.pop {
+    border: 2px solid;
+    border-collapse: collapse;
+    width: 100%; /* Ensure the table fills the available width */
+}
+
+.pop th,
+.pop td {
+    border: 2px solid black;
+}
 
     .close-btn {
         cursor: pointer;
@@ -384,17 +394,7 @@ $result = $conn->query($sql);
         background-color: #f2f2f2;
     }
 
-    .pop {
-        border: 2px solid;
-        border-collapse: collapse;
-
-    }
-
-    .pop th,
-    td {
-        border: 2px solid black;
-
-    }
+  
 
     .compare-container {
         position: fixed;
@@ -558,7 +558,7 @@ $result = $conn->query($sql);
                             break;
                     }
                     ?>
-                    <img src="<?php echo $popupSimImage; ?>" width="200" height="150" alt="<?php echo $tableName; ?> Logo">
+                    <img src="<?php echo $popupSimImage; ?>" width="70" height="50" alt="<?php echo $tableName; ?> Logo">
 
                     <h1 id="popup-price-heading" style="text-align: left;"></h1>
 
@@ -625,12 +625,12 @@ $result = $conn->query($sql);
                             document.getElementById('popup-id').innerText = planDetails.id;
                             document.getElementById('popup-price-value').innerText = '₹' + planDetails.price;
 
-                            document.getElementById('popup-validity').innerText = +planDetails.validity + ' days';
-                            document.getElementById('popup-dataperday').innerText = +planDetails.dataperday + ' GB';
-                            document.getElementById('popup-additionaldata').innerText = +planDetails.additionaldata + ' GB';
-                            document.getElementById('popup-data_talktime').innerText = +planDetails.data_talktime;
-                            document.getElementById('popup-type').innerText = +planDetails.type;
-                            document.getElementById('popup-description').innerText = +planDetails.description;
+                            document.getElementById('popup-validity').innerText = planDetails.validity + ' days';
+                            document.getElementById('popup-dataperday').innerText = planDetails.dataperday + ' GB';
+                            document.getElementById('popup-additionaldata').innerText = planDetails.additionaldata + ' GB';
+                            document.getElementById('popup-data_talktime').innerText = planDetails.data_talktime;
+                            document.getElementById('popup-type').innerText = planDetails.type;
+                            document.getElementById('popup-description').innerText = planDetails.description;
                         } else {
                             console.error('Failed to fetch plan details');
                         }
