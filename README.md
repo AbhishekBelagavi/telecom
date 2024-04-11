@@ -1,6 +1,17 @@
-# TELECOMPARE
+# **TELECOMPARE**
+## Introduction
 
-TELECOMPARE is an application designed to simplify the process of comparing mobile carriers, rate plans, and services. It integrates information from various carriers' websites into one convenient platform, allowing users to make informed decisions when selecting the best plan for their needs.
+
+TELECOMPARE is a web application that simplifies the process of selecting mobile plans by allowing users to compare offerings from different carriers. With detailed information about rate plans, including features, prices, and terms, users can easily identify the best value plan based on their individual requirements.
+
+## Features
+
+1. **Carrier Comparison**: View detailed information about rate plans offered by different mobile carriers. Compare features, prices, and terms side by side. Easily identify the best value plan based on individual requirements.
+
+2. **Prepaid and Postpaid Plans**: Explore both prepaid and postpaid options offered by each carrier. Understand the benefits and limitations of each plan type. Choose the most suitable plan based on budget and usage preferences.
+
+3. **Internet Network Coverage**: [Work in Progress] Coming soon! Analyze and compare internet network coverage across different carriers. Evaluate network strength and availability in specific locations. Make informed decisions based on network coverage maps and data.
+
 
 ## User Story
 
@@ -35,11 +46,17 @@ To run TELECOMPARE on your local machine, follow these steps:
 1. Open your web browser and navigate to [http://localhost/telecompare](http://localhost/telecompare).
 2. You should now see the TELECOMPARE homepage.
 
+**Please Note:** We are currently in the beta testing phase, and our project is still in progress.
+
+3. Internet Network Coverage feature is currently under development.
+
+
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **Database**: MySQL
+
 
 ## License
 
