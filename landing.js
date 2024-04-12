@@ -11,12 +11,12 @@ let movies = [{
 {
     name: "VI",
     des: "Vi (Vodafone Idea Limited): Vi is a merged entity of Vodafone India and Idea Cellular, offering mobile and broadband services. It is one of the major telecom operators in India.",
-    image: "./images/airtel1.jpg"
+    image: "./images/vilogo.webp"
 },
 {
     name: "AIRTEL",
     des: "Airtel (Bharti Airtel): Airtel is a leading private telecommunications company in India, providing services like mobile, broadband, and digital TV. It is one of the largest and oldest telecom operators in the country.",
-    image:"Telecompare3/images/airtel1.jpg"
+    image:"./images/airtel1.jpg"
 },
 
 ];

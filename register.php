@@ -12,8 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
     $stmt->bind_param("sssss", $email, $password, $fullname, $phone, $telecomProvider);
 
     if ($stmt->execute()) {
+        // echo "Registration successful";
         header("Location: login.php");
-        exit();
+
     } else {
         echo "Registration failed: " . $stmt->error;
     }
@@ -22,8 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
     $conn->close();
 }
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -34,99 +33,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./login-form/css/style.css">
-
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('./login-form/images/main.png');
-            background-size: cover;
-            font-family: 'Lato', sans-serif;
-        }
-
         .ftco-section {
             padding: 1em 0;
         }
 
-        .login-wrap {
-            background: rgba(28, 21, 46, 0.8);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
+        .form-control {
 
-        .login-wrap h3 {
-            color: #fff;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="password"],
-        .form-group input[type="tel"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            outline: none;
-        }
-
-        .form-group input::placeholder {
-            color: #ddd;
-        }
-
-        .form-group .btn-primary {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: #3d6deb;
-            color: #fff;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .form-group .btn-primary:hover {
-            background: #345ec3;
-        }
-
-        .text-center {
-            text-align: center;
-            color: #fff;
-        }
-
-        .social {
-            margin-top: 20px;
-        }
-
-        .social a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social a:hover {
-            color: #345ec3;
+            background: rgb(28 21 46 / 80%);
         }
     </style>
 </head>
 
-<body>
-    
+<body class="img js-fullheight" style="background-image: url(./login-form/images/main.png); background-size: cover;">
     <section class="ftco-section">
         <div class="container">
+
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
-                    <div class="login-wrap">
-                        <h3 class="mb-4">Create an account</h3>
+                    <div class="login-wrap p-0">
+                        <h3 class="mb-4 text-center">Create an account</h3>
                         <form action="#" class="signup-form" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="Email" placeholder="Email" required>
@@ -147,10 +77,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
                                 <input type="text" class="form-control" name="telecomProvider" placeholder="Telecom Provider">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Register</button>
+                                <button type="submit" class="form-control btn btn-primary submit px-3" name="register">Register</button>
                             </div>
                         </form>
-                        <p class="text-center">Already have an account? <a href="login.php">Login</a></p>
+                        <p class="w-100 text-center">&mdash; Already have an account? &mdash;</p>
+                        <div class="social d-flex text-center">
+                            <a href="login.php" class="px-2 py-2 ml-md-1 rounded">Login</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,6 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["register"])) {
     <script src="./login-form/js/popper.js"></script>
     <script src="./login-form/js/bootstrap.min.js"></script>
     <script src="./login-form/js/main.js"></script>
+
 </body>
 
 </html>

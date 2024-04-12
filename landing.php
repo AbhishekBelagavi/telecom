@@ -207,9 +207,11 @@
         }
 
         .team-img {
-            width: 100%;
-            height: 100%;
-        }
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
 
         .team-card-container {
             width: 280px;
@@ -371,13 +373,13 @@
                 <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
                     <div class="team-card">
                         <div class="img-wrapper">
-                            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                            <img class="team-img" src="images/abhi1.jpg">
                         </div>
                         <p class="text-blk name">
                             Abhishek Belagavi
                         </p>
                         <p class="text-blk position">
-                            Team Leader
+                            Scrum Master
                         </p>
                         <div class="social-media-links">
                             <a href="http://www.twitter.com/" target="_blank">
@@ -398,13 +400,13 @@
                 <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
                     <div class="team-card">
                         <div class="img-wrapper">
-                            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                            <img class="team-img" src="images/kavya.jpg">
                         </div>
                         <p class="text-blk name">
                             Kavya Hegde
                         </p>
                         <p class="text-blk position">
-                            Instructor
+                            Backend Dev
                         </p>
                         <div class="social-media-links">
                             <a href="http://www.twitter.com/" target="_blank">
@@ -425,13 +427,13 @@
                 <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
                     <div class="team-card">
                         <div class="img-wrapper">
-                            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                            <img class="team-img" src="images/chinni.jpg">
                         </div>
                         <p class="text-blk name">
                             Chinmayi R
                         </p>
                         <p class="text-blk position">
-                            Instructor
+                       Frontend Dev
                         </p>
                         <div class="social-media-links">
                             <a href="http://www.twitter.com/" target="_blank">
@@ -452,13 +454,13 @@
                 <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
                     <div class="team-card">
                         <div class="img-wrapper">
-                            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                            <img class="team-img" src="images/chai.jpg">
                         </div>
                         <p class="text-blk name">
                             Chaitra R
                         </p>
                         <p class="text-blk position">
-                            Instructor
+                        Frontend Dev
                         </p>
                         <div class="social-media-links">
                             <a href="http://www.twitter.com/" target="_blank">
@@ -479,13 +481,13 @@
                 <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
                     <div class="team-card">
                         <div class="img-wrapper">
-                            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                            <img class="team-img" src="images/spoorthi.jpg">
                         </div>
                         <p class="text-blk name">
                             Spoorthi V
                         </p>
                         <p class="text-blk position">
-                            Instructor
+                        Backend Dev
                         </p>
                         <div class="social-media-links">
                             <a href="http://www.twitter.com/" target="_blank">
@@ -506,13 +508,13 @@
                 <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
                     <div class="team-card">
                         <div class="img-wrapper">
-                            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                            <img class="team-img" src="images/pallavi1.jpg">
                         </div>
                         <p class="text-blk name">
                             Pallavi B L
                         </p>
                         <p class="text-blk position">
-                            Instructor
+                            Tester
                         </p>
                         <div class="social-media-links">
                             <a href="http://www.twitter.com/" target="_blank">
