@@ -37,9 +37,9 @@ if (!empty($filterPrice)) {
     // Map price range options to min-max values
     $priceRanges = [
         "0-100" => ["min" => 0, "max" => 100],
-        "200-500" => ["min" => 200, "max" => 500],
-        "500-1000" => ["min" => 500, "max" => 1000],
-        "1000-above" => ["min" => 1000, "max" => PHP_INT_MAX], // Set a large max value
+        "101-500" => ["min" => 101, "max" => 500],
+        "501-1000" => ["min" => 501, "max" => 1000],
+        "1001-above" => ["min" => 1001, "max" => PHP_INT_MAX], // Set a large max value
     ];
 
     if (array_key_exists($filterPrice, $priceRanges)) {

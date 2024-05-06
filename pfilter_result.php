@@ -37,9 +37,9 @@ if (!empty($filterPrice)) {
     // Map price range options to min-max values
     $priceRanges = [
         "0-100" => ["min" => 0, "max" => 100],
-        "200-500" => ["min" => 200, "max" => 500],
-        "500-1000" => ["min" => 500, "max" => 1000],
-        "1000-above" => ["min" => 1000, "max" => PHP_INT_MAX], // Set a large max value
+        "101-500" => ["min" => 101, "max" => 500],
+        "501-1000" => ["min" => 501, "max" => 1000],
+        "1001-above" => ["min" => 1001, "max" => PHP_INT_MAX], // Set a large max value
     ];
 
     if (array_key_exists($filterPrice, $priceRanges)) {
@@ -342,59 +342,56 @@ $result = $conn->query($sql);
         text-align: center;
 
     }
-    .popup {
+    table {
+
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+
+}
+
+.popup {
     background: #fff;
     margin-top: 7%;
-    height: 80%;
+    height: 80%; /* You can adjust the height as needed */
     padding: 50px 30px;
-    width: 390px;
+    width: 314px;
     max-width: 100%;
     border-radius: 5px;
     box-shadow: transparent;
     text-align: center;
     position: relative;
-    overflow-y: scroll; /* Add this line */
+    overflow-y: auto; /* Add this to make the popup scrollable */
+}
+
+.popup table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.popup th,
+.popup td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap; /* Prevent the content from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add an ellipsis if the content overflows */
+}
+
+.popup th {
+    background-color: #f2f2f2;
 }
 
 .pop {
     border: 2px solid;
     border-collapse: collapse;
-    width: 100%; /* Ensure the table fills the available width */
 }
 
 .pop th,
 .pop td {
     border: 2px solid black;
 }
-
-    .close-btn {
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-    }
-
-    table {
-
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-
-    }
-
-    th,
-    td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-  
 
     .compare-container {
         position: fixed;
@@ -580,7 +577,7 @@ $result = $conn->query($sql);
                                 <td>Validity</td>
                                 <td id="popup-validity"></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>Data Per Day</td>
                                 <td id="popup-dataperday"></td>
                             </tr>
@@ -588,7 +585,7 @@ $result = $conn->query($sql);
                                 <td>Additional Data</td>
                                 <td id="popup-additionaldata"></td>
                             </tr>
-                            <tr>
+                            <tr> -->
                                 <td>Data/Talktime</td>
                                 <td id="popup-data_talktime"></td>
                             </tr>
@@ -626,8 +623,8 @@ $result = $conn->query($sql);
                             document.getElementById('popup-price-value').innerText = '₹' + planDetails.price;
 
                             document.getElementById('popup-validity').innerText = planDetails.validity + ' days';
-                            document.getElementById('popup-dataperday').innerText = planDetails.dataperday + ' GB';
-                            document.getElementById('popup-additionaldata').innerText = planDetails.additionaldata + ' GB';
+                            // document.getElementById('popup-dataperday').innerText = planDetails.dataperday + ' GB';
+                            // document.getElementById('popup-additionaldata').innerText = planDetails.additionaldata + ' GB';
                             document.getElementById('popup-data_talktime').innerText = planDetails.data_talktime;
                             document.getElementById('popup-type').innerText = planDetails.type;
                             document.getElementById('popup-description').innerText = planDetails.description;

@@ -324,9 +324,9 @@
             <select name="price" id="price">
                 <option value="">Any</option>
                 <option value="0-100">0-100</option>
-                <option value="200-500">200-500</option>
-                <option value="500-1000">500-1000</option>
-                <option value="1000-above">1000 above</option>
+                <option value="101-500">100-500</option>
+                <option value="501-1000">500-1000</option>
+                <option value="1001-above">1000 above</option>
             </select>
             <label for="validity">Validity:</label>
             <select name="validity" id="validity">
