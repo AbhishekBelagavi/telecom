@@ -64,4 +64,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For inquiries or suggestions regarding TELECOMPARE, please contact us at [abhishekbelagavurb@gmail.com](mailto:abhishekbelagavurb@gmail.com).
+For inquiries or suggestions regarding TELECOMPARE, please contact us at [abhishekbelagavirb@gmail.com](mailto:abhishekbelagavirb@gmail.com).
